@@ -16,6 +16,9 @@ try {
             else
                 throw new Exception("Identifiant de billet non défini");
         }
+        else if ($_GET['action'] == 'apropos') {
+          apropos();
+        }
         else
             throw new Exception("Action non valide");
     }

@@ -1,20 +1,20 @@
-<?php $titre = "Mon Blog - " . $billet['titre']; ?>
+<?php $titre = "Mon Blog - " . $billet->getTitre(); ?>
 
 <?php ob_start(); ?>
 <article>
     <header>
-        <h1 class="titreBillet"><?= $billet['titre'] ?></h1>
-        <time><?= $billet['date'] ?></time>
+        <h1 class="titreBillet"><?= $billet->getTitre() ?></h1>
+        <time><?= $billet->getDate() ?></time>
     </header>
-    <p><?= $billet['contenu'] ?></p>
+    <p><?= $billet->getContenu() ?></p>
 </article>
 <hr />
 <header>
-    <h1 id="titreReponses">Réponses à <?= $billet['titre'] ?></h1>
+    <h1 id="titreReponses">Réponses à <?= $billet->getTitre() ?></h1>
 </header>
 <?php foreach ($commentaires as $commentaire): ?>
-    <p><?= $commentaire['auteur'] ?> dit :</p>
-    <p><?= $commentaire['contenu'] ?></p>
+    <p><?= $commentaire->getAuteur() ?> dit :</p>
+    <p><?= $commentaire->getContenu() ?></p>
 <?php endforeach; ?>
 <?php $contenu = ob_get_clean(); ?>
 

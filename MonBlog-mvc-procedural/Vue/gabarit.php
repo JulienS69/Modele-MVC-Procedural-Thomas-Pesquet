@@ -16,6 +16,7 @@
             </div> <!-- #contenu -->
             <footer id="piedBlog">
                 Blog réalisé avec PHP, HTML5 et CSS.
+                <a href="index.php?action=apropos">A propos de mon blog</a>
             </footer>
         </div> <!-- #global -->
     </body>
